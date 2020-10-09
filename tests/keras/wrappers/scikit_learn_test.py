@@ -18,7 +18,7 @@ verbosity = 0
 optim = 'adam'
 loss = 'categorical_crossentropy'
 
-np.random.seed(42)
+#np.random.seed(42)
 (X_train, y_train), (X_test, y_test) = get_test_data(
     num_train=num_train, num_test=num_test, input_shape=(input_dim,),
     classification=True, num_classes=num_classes)

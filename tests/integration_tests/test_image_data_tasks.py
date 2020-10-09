@@ -10,7 +10,7 @@ from keras.utils.np_utils import to_categorical
 
 
 def test_image_classification():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     input_shape = (16, 16, 3)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=500,
                                                          num_test=200,
@@ -43,7 +43,7 @@ def test_image_classification():
 
 
 def test_image_data_generator_training():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     img_gen = ImageDataGenerator(rescale=1.)  # Dummy ImageDataGenerator
     input_shape = (16, 16, 3)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=500,

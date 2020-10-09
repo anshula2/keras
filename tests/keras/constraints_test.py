@@ -11,7 +11,7 @@ def get_test_values():
 
 
 def get_example_array():
-    np.random.seed(3537)
+#    np.random.seed(3537)
     example_array = np.random.random((100, 100)) * 100. - 50.
     example_array[0, 0] = 0.  # 0 could possibly cause trouble
     return example_array

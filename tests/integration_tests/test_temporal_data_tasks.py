@@ -18,7 +18,7 @@ def test_temporal_classification():
     single layer of GRU units and softmax applied
     to the last activations of the units
     '''
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=200,
                                                          num_test=20,
                                                          input_shape=(3, 4),
@@ -50,7 +50,7 @@ def test_temporal_classification_functional():
     single layer of GRU units and softmax applied
     to the last activations of the units
     '''
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=200,
                                                          num_test=20,
                                                          input_shape=(3, 4),
@@ -77,7 +77,7 @@ def test_temporal_regression():
     Predict float numbers (regression) based on sequences
     of float numbers of length 3 using a single layer of GRU units
     '''
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=200,
                                                          num_test=20,
                                                          input_shape=(3, 5),
@@ -99,7 +99,7 @@ def test_3d_to_3d():
     This does not make use of the temporal structure of the sequence
     (see TimeDistributedDense for more details)
     '''
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=100,
                                                          num_test=20,
                                                          input_shape=(3, 5),

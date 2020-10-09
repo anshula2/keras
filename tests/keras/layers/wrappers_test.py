@@ -124,7 +124,7 @@ def test_TimeDistributed():
                     reason='Flaky with CNTK backend')
 def test_TimeDistributed_learning_phase():
     # test layers that need learning_phase to be set
-    np.random.seed(1234)
+#    np.random.seed(1234)
     x = Input(shape=(3, 2))
     y = wrappers.TimeDistributed(layers.Dropout(.999))(x, training=True)
     model = Model(x, y)

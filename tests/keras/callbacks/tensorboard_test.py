@@ -56,7 +56,7 @@ def get_data_callbacks(num_train=train_samples,
 
 @pytest.mark.parametrize('update_freq', ['batch', 'epoch', 9])
 def DISABLED_test_TensorBoard(tmpdir, update_freq):
-    np.random.seed(np.random.randint(1, 1e7))
+#    np.random.seed(np.random.randint(1, 1e7))
     filepath = str(tmpdir / 'logs')
 
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
@@ -134,7 +134,7 @@ def DISABLED_test_TensorBoard(tmpdir, update_freq):
 
 
 def test_TensorBoard_multi_input_output(tmpdir):
-    np.random.seed(np.random.randint(1, 1e7))
+#    np.random.seed(np.random.randint(1, 1e7))
     filepath = str(tmpdir / 'logs')
 
     (X_train, y_train), (X_test, y_test) = get_data_callbacks(
@@ -206,7 +206,7 @@ def test_TensorBoard_multi_input_output(tmpdir):
 
 
 def test_TensorBoard_convnet(tmpdir):
-    np.random.seed(np.random.randint(1, 1e7))
+#    np.random.seed(np.random.randint(1, 1e7))
     filepath = str(tmpdir / 'logs')
 
     input_shape = (16, 16, 3)

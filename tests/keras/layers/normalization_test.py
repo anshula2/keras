@@ -45,7 +45,7 @@ def test_basic_batchnorm():
 
 
 def test_batchnorm_correctness_1d():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     model = Sequential()
     norm = normalization.BatchNormalization(input_shape=(10,), momentum=0.8)
     model.add(norm)
@@ -63,7 +63,7 @@ def test_batchnorm_correctness_1d():
 
 
 def test_batchnorm_correctness_2d():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     model = Sequential()
     norm = normalization.BatchNormalization(axis=1, input_shape=(10, 6),
                                             momentum=0.8)
@@ -82,7 +82,7 @@ def test_batchnorm_correctness_2d():
 
 
 def test_batchnorm_training_argument():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     bn1 = normalization.BatchNormalization(input_shape=(10,))
     x1 = Input(shape=(10,))
     y1 = bn1(x1, training=True)
@@ -119,7 +119,7 @@ def test_batchnorm_mode_twice():
 
 
 def test_batchnorm_convnet():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     model = Sequential()
     norm = normalization.BatchNormalization(axis=1, input_shape=(3, 4, 4),
                                             momentum=0.8)
@@ -140,7 +140,7 @@ def test_batchnorm_convnet():
 @pytest.mark.skipif((K.backend() == 'theano'),
                     reason='Bug with theano backend')
 def test_batchnorm_convnet_no_center_no_scale():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     model = Sequential()
     norm = normalization.BatchNormalization(axis=-1, center=False, scale=False,
                                             input_shape=(3, 4, 4), momentum=0.8)

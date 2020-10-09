@@ -16,7 +16,7 @@ def create_masking_model():
 
 
 def test_masking():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     x = np.array([[[1], [1]],
                   [[0], [0]]])
     model = create_masking_model()

@@ -31,7 +31,7 @@ decimal_precision = {
 
 
 def _get_test_data():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (x_train, y_train), (x_test, y_test) = get_test_data(num_train=train_samples,
                                                          num_test=test_samples,
                                                          input_shape=(input_dim,),

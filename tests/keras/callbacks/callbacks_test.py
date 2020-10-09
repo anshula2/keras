@@ -120,7 +120,7 @@ class TestCallbackCounts(object):
         return model
 
     def test_callback_hooks_are_called_in_fit(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (X_train, y_train), (X_test, y_test) = get_data_callbacks(num_train=10,
                                                                   num_test=4)
         y_train = np_utils.to_categorical(y_train)
@@ -152,7 +152,7 @@ class TestCallbackCounts(object):
             })
 
     def test_callback_hooks_are_called_in_evaluate(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (_, _), (X_test, y_test) = get_data_callbacks(num_test=10)
 
         y_test = np_utils.to_categorical(y_test)
@@ -181,7 +181,7 @@ class TestCallbackCounts(object):
             })
 
     def test_callback_hooks_are_called_in_predict(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (_, _), (X_test, _) = get_data_callbacks(num_test=10)
 
         model = self._get_model()
@@ -208,7 +208,7 @@ class TestCallbackCounts(object):
             })
 
     def test_callback_hooks_are_called_in_fit_generator(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (X_train, y_train), (X_test, y_test) = get_data_callbacks(num_train=10,
                                                                   num_test=4)
         y_train = np_utils.to_categorical(y_train)
@@ -246,7 +246,7 @@ class TestCallbackCounts(object):
             })
 
     def test_callback_hooks_are_called_in_evaluate_generator(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (_, _), (X_test, y_test) = get_data_callbacks(num_test=10)
         y_test = np_utils.to_categorical(y_test)
 
@@ -275,7 +275,7 @@ class TestCallbackCounts(object):
             })
 
     def test_callback_hooks_are_called_in_predict_generator(self):
-        np.random.seed(1337)
+#        np.random.seed(1337)
         (_, _), (X_test, _) = get_data_callbacks(num_test=10)
 
         def data_generator(x, batch_size):
@@ -347,7 +347,7 @@ class TestCallbackCounts(object):
 
 
 def test_TerminateOnNaN():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
 
     y_test = np_utils.to_categorical(y_test)
@@ -385,7 +385,7 @@ def test_TerminateOnNaN():
 
 
 def test_stop_training_csv(tmpdir):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     fp = str(tmpdir / 'test.csv')
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
 
@@ -433,7 +433,7 @@ def test_stop_training_csv(tmpdir):
 
 
 def test_ModelCheckpoint(tmpdir):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     filepath = str(tmpdir / 'checkpoint.h5')
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
@@ -511,7 +511,7 @@ def test_ModelCheckpoint(tmpdir):
 
 
 def test_EarlyStopping():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
     y_train = np_utils.to_categorical(y_train)
@@ -546,7 +546,7 @@ def test_EarlyStopping():
 
 
 def test_EarlyStopping_reuse():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     patience = 3
     data = np.random.random((100, 1))
     labels = np.where(data > 0.5, 1, 0)
@@ -712,7 +712,7 @@ def test_EarlyStopping_final_weights_when_restoring_model_weights():
 
 
 def test_LearningRateScheduler():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
     y_train = np_utils.to_categorical(y_train)
@@ -730,13 +730,13 @@ def test_LearningRateScheduler():
 
 
 def test_ReduceLROnPlateau():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
     y_train = np_utils.to_categorical(y_train)
 
     def make_model():
-        np.random.seed(1337)
+#        np.random.seed(1337)
         model = Sequential()
         model.add(Dense(num_hidden, input_dim=input_dim, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -813,7 +813,7 @@ def DISABLED_test_ReduceLROnPlateau_backwards_compatibility():
 
 
 def test_CSVLogger(tmpdir):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     filepath = str(tmpdir / 'log.tsv')
     sep = '\t'
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
@@ -821,7 +821,7 @@ def test_CSVLogger(tmpdir):
     y_train = np_utils.to_categorical(y_train)
 
     def make_model():
-        np.random.seed(1337)
+#        np.random.seed(1337)
         model = Sequential()
         model.add(Dense(num_hidden, input_dim=input_dim, activation='relu'))
         model.add(Dense(num_classes, activation='softmax'))
@@ -868,7 +868,7 @@ def test_CSVLogger(tmpdir):
 
 
 def DISABLED_test_CallbackValData():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
     y_train = np_utils.to_categorical(y_train)
@@ -897,7 +897,7 @@ def DISABLED_test_CallbackValData():
 
 
 def test_LambdaCallback():
-    np.random.seed(1337)
+#    np.random.seed(1337)
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()
     y_test = np_utils.to_categorical(y_test)
     y_train = np_utils.to_categorical(y_train)
@@ -929,7 +929,7 @@ def test_LambdaCallback():
 @pytest.mark.skipif(K.backend() != 'tensorflow', reason='Uses TensorBoard')
 def test_TensorBoard_with_ReduceLROnPlateau(tmpdir):
     import shutil
-    np.random.seed(np.random.randint(1, 1e7))
+#    np.random.seed(np.random.randint(1, 1e7))
     filepath = str(tmpdir / 'logs')
 
     (X_train, y_train), (X_test, y_test) = get_data_callbacks()

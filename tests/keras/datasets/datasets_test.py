@@ -58,33 +58,33 @@ def fake_downloaded_reuters_path(monkeypatch):
 
 
 def DISABLED_test_boston_load_does_not_affect_global_rng(fake_downloaded_boston_path):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     before = np.random.randint(0, 100, size=10)
 
-    np.random.seed(1337)
-    boston_housing.load_data(path=fake_downloaded_boston_path, seed=9876)
+#    np.random.seed(1337)
+#    boston_housing.load_data(path=fake_downloaded_boston_path, seed=9876)
     after = np.random.randint(0, 100, size=10)
 
     assert np.array_equal(before, after)
 
 
 def DISABLED_test_imdb_load_does_not_affect_global_rng(fake_downloaded_imdb_path):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     before = np.random.randint(0, 100, size=10)
 
-    np.random.seed(1337)
-    imdb.load_data(path=fake_downloaded_imdb_path, seed=9876)
+#    np.random.seed(1337)
+#    imdb.load_data(path=fake_downloaded_imdb_path, seed=9876)
     after = np.random.randint(0, 100, size=10)
 
     assert np.array_equal(before, after)
 
 
 def DISABLED_test_reuters_load_does_not_affect_global_rng(fake_downloaded_reuters_path):
-    np.random.seed(1337)
+#    np.random.seed(1337)
     before = np.random.randint(0, 100, size=10)
 
-    np.random.seed(1337)
-    reuters.load_data(path=fake_downloaded_reuters_path, seed=9876)
+#    np.random.seed(1337)
+#    reuters.load_data(path=fake_downloaded_reuters_path, seed=9876)
     after = np.random.randint(0, 100, size=10)
 
     assert np.array_equal(before, after)

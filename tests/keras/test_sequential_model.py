@@ -63,7 +63,7 @@ def test_sequential_pop():
 
 
 def _get_test_data():
-    np.random.seed(1234)
+#    np.random.seed(1234)
 
     train_samples = 100
     test_samples = 50
